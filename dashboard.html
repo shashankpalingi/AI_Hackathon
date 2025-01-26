@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Folklore Game Engine - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+    <style>
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+        .hover-bg:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 text-gray-500 hover:text-custom hover-bg rounded-full">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="p-2 text-gray-500 hover:text-custom hover-bg rounded-full">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <div class="flex items-center hover-scale">
+                        <img class="h-8 w-8 rounded-full" src="./Assets/Bengali couple.jpeg" alt="User"/>
+                        <span class="ml-2 text-sm font-medium text-gray-700">Cognitive coders</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20 pb-8 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-900">Indian Folklore Collection</h1>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-4 rounded-lg shadow-sm hover-shadow">
+                <div class="flex items-center">
+                    <div class="p-3 bg-custom/10 rounded-lg">
+                        <i class="fas fa-gamepad text-custom text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Games in Progress</p>
+                        <p class="text-xl font-semibold text-gray-900">4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm hover-shadow">
+                <div class="flex items-center">
+                    <div class="p-3 bg-green-100 rounded-lg">
+                        <i class="fas fa-check text-green-600 text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Completed Stories</p>
+                        <p class="text-xl font-semibold text-gray-900">2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm hover-shadow">
+                <div class="flex items-center">
+                    <div class="p-3 bg-red-100 rounded-lg">
+                        <i class="fas fa-heart text-red-600 text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Favorite Folklores</p>
+                        <p class="text-xl font-semibold text-gray-900">3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm hover-shadow">
+                <div class="flex items-center">
+                    <div class="p-3 bg-yellow-100 rounded-lg">
+                        <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Hours Played</p>
+                        <p class="text-xl font-semibold text-gray-900">16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-6 flex flex-col sm:flex-row gap-4">
+            <div class="flex-1">
+                <div class="relative">
+                    <input type="text" placeholder="Search games..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"/>
+                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <select class="!rounded-button border border-gray-300 px-4 py-2 bg-white focus:ring-2 focus:ring-custom focus:border-custom">
+                    <option>All Indian Regions</option>
+                    <option>North Indian</option>
+                    <option>South Indian</option>
+                    <option>East Indian</option>
+                </select>
+                <select class="!rounded-button border border-gray-300 px-4 py-2 bg-white focus:ring-2 focus:ring-custom focus:border-custom">
+                    <option>Sort By: Recent</option>
+                    <option>Alphabetical</option>
+                    <option>Region</option>
+                    <option>Completion</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover-shadow hover-scale">
+                <img src="./Assets/25 Best Tales Of Panchatantra For Kids.jpeg" class="w-full h-48 object-cover" alt="Japanese Folklore"/>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">Panchatantra Tales</h3>
+                        <span class="px-2 py-1 text-xs font-medium bg-custom/10 text-custom rounded-full">North India</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Dive into the wisdom-filled world of ancient Indian stories featuring talking animals and moral lessons that have enlightened generations.</p>
+                    <a href="./Panchatantra.html"> <button class="!rounded-button mt-4 w-full bg-custom text-white py-2 hover:bg-custom/90">Continue Playing</button> </a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover-shadow hover-scale">
+                <img src="./Assets/rama 2.jpeg" class="w-full h-48 object-cover" alt="Norse Legends"/>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">Ramayana Quest</h3>
+                        <span class="px-2 py-1 text-xs font-medium bg-custom/10 text-custom rounded-full">Epic</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Experience the legendary journey of Lord Rama, battle mythical beings, and learn about dharma through this epic adventure.</p>
+                    <a href="./Ramayana.html">
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white py-2 hover:bg-custom/90" >Start Playing</button> </a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover-shadow hover-scale">
+                <img src="./Assets/😘😘.jpeg" class="w-full h-48 object-cover" alt="Celtic Myths"/>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">Krishna Leela</h3>
+                        <span class="px-2 py-1 text-xs font-medium bg-custom/10 text-custom rounded-full">Mathura</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Play through the divine stories of Lord Krishna, from his mischievous childhood to his role in the great Mahabharata.</p>
+                     <a href="./krishna.html"><button class="!rounded-button mt-4 w-full bg-custom text-white py-2 hover:bg-custom/90">Start Playing</button> </a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover-shadow hover-scale">
+                <img src="./Assets/17.jpeg" class="w-full h-48 object-cover" alt="African Tales"/>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">Tales of Akbar-Birbal</h3>
+                        <span class="px-2 py-1 text-xs font-medium bg-custom/10 text-custom rounded-full">Mughal Era</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Solve witty riddles and puzzles with Birbal in Emperor Akbar&#39;s court, experiencing the golden age of Indian wisdom.</p>
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white py-2 hover:bg-custom/90">Start Playing</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover-shadow hover-scale">
+                <img src="./Assets/Happy Onam Celebration _ Premium AI-generated image 2.jpeg" class="w-full h-48 object-cover" alt="Amazon Legends"/>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">Jataka Tales</h3>
+                        <span class="px-2 py-1 text-xs font-medium bg-custom/10 text-custom rounded-full">Buddhist</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Journey through the previous lives of Buddha, learning valuable life lessons through enchanting stories.</p>
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white py-2 hover:bg-custom/90">Start Playing</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover-shadow hover-scale">
+                <img src="./Assets/_ (3).jpeg" class="w-full h-48 object-cover" alt="Greek Myths"/>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-semibold text-gray-900">South Indian Legends</h3>
+                        <span class="px-2 py-1 text-xs font-medium bg-custom/10 text-custom rounded-full">South India</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Explore the rich mythology of South India, from the stories of Madurai to the legends of ancient Tamil kingdoms.</p>
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white py-2 hover:bg-custom/90">Start Playing</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
